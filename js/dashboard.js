@@ -71,3 +71,37 @@ const toggleButton = document.querySelector('.dark-light');
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
 });
+
+const progressBar = document.getElementById("progress-bar");
+let statusVal = 0;
+let id = null;
+let speed = 50;
+
+id = setInterval(() => {
+    updateProgressBar();
+}, speed);
+
+function updateProgressBar() {
+    const isMaxVal = statusVal === 100;
+
+    if (isMaxVal) {
+        clearInterval(id);
+        statusVal = 0;
+
+        //TODO:
+        alert('max value reached');
+
+        return setTimeout(() => {
+            id = setInterval(() => {
+                updateProgressBar();
+            }, speed);
+        }, 2000);
+    }
+
+    statusVal++;
+    progressBar.dataset.status = statusVal + "%";
+    progressBar.setAttribute(
+        "style",
+        `--__progress-bar__status_wh: ${statusVal}%;`
+    );
+}

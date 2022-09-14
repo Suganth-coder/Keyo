@@ -8,8 +8,7 @@
     <title>Document</title>
 
     <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- dashboard css  -->
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
@@ -22,8 +21,7 @@
         </video>
     </div>
     <div class="dark-light">
-        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
         </svg>
     </div>
@@ -43,8 +41,7 @@
             <div class="header-profile">
                 <div class="notification">
                     <span class="notification-number">3</span>
-                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
                         <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
                     </svg>
                 </div>
@@ -159,9 +156,8 @@
                                         fill="#d6355b" data-original="#d72878" />
                                 </svg> Keyosoft
                             </h3>
-                            <div class="content-text">Installing software updates is another effective method for how to
-                                prevent keylogging attacks.</div>
-                            <button class="content-button">Check</button>
+                            <div class="content-text">Installing software updates is another effective method for how to prevent keylogging attacks.</div>
+                            <button class="content-button status-button">Check</button>
                         </div>
                         <img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
                     </div>
@@ -208,38 +204,27 @@
                                                 d="M30.68 39h-3.24l-2.76-9.04h-8.32L13.72 39H10.6l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L17.12 27h6.84zM37.479 12.24c0 .453-.16.84-.48 1.16-.32.319-.7.479-1.14.479-.44 0-.827-.166-1.16-.5-.334-.333-.5-.713-.5-1.14s.166-.807.5-1.141c.333-.333.72-.5 1.16-.5.44 0 .82.16 1.14.48.321.322.48.709.48 1.162zM37.24 39h-2.88V18.96h2.88V39z"
                                                 fill="#e6d2c0" data-original="#ffbd2e" />
                                         </g>
-                                    </svg>
-                                    System update
+                                    </svg> System update
                                 </div>
 
                                 <span class="status">
                                     <span class="status-circle"></span> Update Available</span>
                                 <div class="button-wrapper">
                                     <button class="content-button status-button">Update your system</button>
+
+                                    <!-- pop up starting  -->
                                     <div class="pop-up">
-                                        <div class="pop-up__title">Update This App
-                                            <svg class="close" width="24" height="24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-x-circle">
-                                                <circle cx="12" cy="12" r="10" />
-                                                <path d="M15 9l-6 6M9 9l6 6" />
-                                            </svg>
-                                        </div>
-                                        <div class="pop-up__subtitle">Adjust your selections for advanced options as
-                                            desired before continuing. <a href="#">Learn more</a></div>
-                                        <div class="checkbox-wrapper">
-                                            <input type="checkbox" id="check1" class="checkbox">
-                                            <label for="check1">Import previous settings and preferences</label>
-                                        </div>
-                                        <div class="checkbox-wrapper">
-                                            <input type="checkbox" id="check2" class="checkbox">
-                                            <label for="check2">Remove old versions</label>
-                                        </div>
+                                        <div class="pop-up__title">Checking your application remotely</div><br>
+                                        <!-- progress bar starts -->
+                                        <div class="progress-bar" id="progress-bar" data-status="0%" aria-label="Progress bar."></div><br>
+                                        <!-- progress bar ending  -->
                                         <div class="content-button-wrapper">
                                             <button class="content-button status-button open close">Cancel</button>
                                             <button class="content-button status-button">Continue</button>
                                         </div>
                                     </div>
+                                    <!-- pop up ending -->
+
                                     <div class="menu">
                                         <button class="dropdown">
                                             <ul>
@@ -301,7 +286,7 @@
                                 </span>
                                 <div class="app-card__subtext">Edit, master and create fully proffesional videos</div>
                                 <div class="app-card-buttons">
-                                    <button class="content-button status-button">Update</button>
+                                    <button class="content-button">Update</button>
                                     <div class="menu"></div>
                                 </div>
                             </div>
@@ -321,7 +306,7 @@
                                 </span>
                                 <div class="app-card__subtext">Design and publish great projects & mockups</div>
                                 <div class="app-card-buttons">
-                                    <button class="content-button status-button">Update</button>
+                                    <button class="content-button">Update</button>
                                     <div class="menu"></div>
                                 </div>
                             </div>
@@ -341,7 +326,7 @@
                                 </span>
                                 <div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
                                 <div class="app-card-buttons">
-                                    <button class="content-button status-button">Update</button>
+                                    <button class="content-button">Update</button>
                                     <div class="menu"></div>
                                 </div>
                             </div>
@@ -356,12 +341,8 @@
     <!-- Bootstrap JS -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script src="../js/dashboard.js"></script>
 </body>
 
