@@ -73,10 +73,13 @@ toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
 });
 
+var stop = 0;
+
 function check_progress() {
 
 
     const progressBar = document.getElementById("progress-bar");
+    $(".res").text("");
     let statusVal = 0;
     let id = null;
     let speed = 50;
@@ -88,13 +91,29 @@ function check_progress() {
     function updateProgressBar() {
         const isMaxVal = statusVal === 100;
 
+
+        if (statusVal == 50) {
+
+            $.get("http://localhost:8080/keyo/status", function(data, status) {
+
+                console.log(data.code);
+                if (data.code == 200) {
+                    $(".res").text("Your System has been affected with keylogger!");
+                    stop = 1;
+                }
+            });
+
+        }
+
+        if (stop == 1)
+            return;
+
         if (isMaxVal) {
             clearInterval(id);
             statusVal = 0;
 
             //TODO:
             $(".res").text("Your System has been checked completely. Currently, There is no threat. Keyo is protecting you✨.");
-            return;
 
             return setTimeout(() => {
                 id = setInterval(() => {
