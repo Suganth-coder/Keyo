@@ -94,14 +94,24 @@ function check_progress() {
 
         if (statusVal == 50) {
 
-            $.get("http://localhost:8080/keyo/status", function(data, status) {
-
-                console.log(data.code);
-                if (data.code == 200) {
-                    $(".res").text("Your System has been affected with keylogger!");
+            $.get("http://localhost:8080/detect_keylogger", function(data) {
+                // Check if keylogger is detected and display the appropriate message
+                if (data.is_keylogging) {
+                    $(".res").text(`Keylogger detected! Process ID: ${data.pid}, Process Name: ${data.process_name}`);
                     stop = 1;
+                } else {
+                    $('#result').text("No keylogger detected.");
                 }
             });
+
+            // $.get("http://localhost:8080/keyo/status", function(data, status) {
+
+            //     console.log(data.code);
+            //     if (data.code == 200) {
+            //         $(".res").text("Your System has been affected with keylogger!");
+            //         stop = 1;
+            //     }
+            // });
 
         }
 
